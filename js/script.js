@@ -16,3 +16,17 @@ function shuffle(array){
     }
     return array;
 }
+
+function initGame(){
+    shuffle(cards);
+    cards.forEach((imgURL) =>{
+        let nouvelElement= document.createElement('div');
+        nouvelElement.classList.add('card');
+        nouvelElement.dataset.url=imgURL;
+        nouvelElement.setAttribute('role','button');
+        nouvelElement.setAttribute('tabindex','0');
+        document.body.appendChild(nouvelElement);
+    });
+
+    
+}
