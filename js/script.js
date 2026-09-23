@@ -20,7 +20,7 @@ function shuffle(array){
         j=Math.floor(Math.random()*i);
         [array[i],array[j]]=[array[j],array[i]]
     }
-    return array;
+   
 }
 
 function initGame(){
@@ -43,8 +43,25 @@ function handleCardClick(card){
     if(card===firstCard || lockBoard==true){
         return;
     }
+    if(firstCard==null){
+        firstCard=card;
+    }else{
+        secondCard=card;
+        lockBoard=true;
+        moves++;
+        checkMatch();
+    }
+    
 
-    firstCard=card;
+}
 
-
+function checkMatch(){
+    if(firstCard.dataset.url===secondCard.dateset.url){
+        firstCard.classList.add('match');
+    }else{
+        setTimeout(() => {
+        firstCard.innerHTML='';
+        secondCard.innerHTML='';
+        }, 800);
+    }
 }
