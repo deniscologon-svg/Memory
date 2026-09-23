@@ -1,5 +1,11 @@
 let dimension=150;
 let imgStart= Math.floor(Math.random() * 100) + 1;
+let firstCard=null;
+let secondCard = null;
+
+let lockBoard=false;
+let moves=0;
+let matchedCount=0;
 
 let images=[];
 for(let i=imgStart; i < imgStart+7; i++){
@@ -25,8 +31,20 @@ function initGame(){
         nouvelElement.dataset.url=imgURL;
         nouvelElement.setAttribute('role','button');
         nouvelElement.setAttribute('tabindex','0');
+        card.addEventListener('click', () => 
+            handleCardClick(card));
         document.body.appendChild(nouvelElement);
     });
 
     
+}
+
+function handleCardClick(card){
+    if(card===firstCard || lockBoard==true){
+        return;
+    }
+
+    firstCard=card;
+
+
 }
