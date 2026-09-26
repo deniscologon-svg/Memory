@@ -6,10 +6,13 @@ let timerDisplay = document.getElementById('timer');
 let resultDisplay = document.getElementById('result');
 let lockBoard = false;
 const monMain = document.querySelector('main');
+const boutonRestart=document.getElementById('restart');
 let moves = 0;
 let matchedCount = 0;
 let seconds = 0;
 let timerInterval = null;
+
+boutonRestart.addEventListener('click', () => initGame());
 
 let images = [];
 for (let i = imgStart; i <= imgStart + 7; i++) {
@@ -62,8 +65,16 @@ function initGame() {
         nouvelElement.setAttribute('tabindex', '0');
         
      
-        nouvelElement.addEventListener('click', () => handleCardClick(nouvelElement));
-        
+        nouvelElement.addEventListener('click', () => {
+            
+            
+                handleCardClick(nouvelElement);
+            
+            
+            });
+        nouvelElement.addEventListener('animationend', () => {
+            nouvelElement.classList.remove('flip-horizontal-bottom');
+        });
         if (monMain) monMain.appendChild(nouvelElement);
     });
 }
@@ -77,16 +88,18 @@ function checkVictory() {
 }
 
 function handleCardClick(card) {
-   
+    
     if (!timerInterval) startTimer();
 
     
     if (lockBoard || card === firstCard || card.classList.contains('match')) {
         return;
     }
-
+    card.classList.add('flip-horizontal-bottom');
+    setTimeout(()=>{
+        card.innerHTML = `<img src="${card.dataset.url}" alt="image de la carte" style="border-radius:20px; pointer-events: none; width: 100%; height: 100%;">`;
+    },400);
     
-    card.innerHTML = `<img src="${card.dataset.url}" alt="image de la carte" style="border-radius:20px; pointer-events: none; width: 100%; height: 100%;">`;
 
     if (firstCard === null) {
         firstCard = card;
