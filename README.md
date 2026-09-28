@@ -1,37 +1,30 @@
-# 🚀 Nom du Projet
+# 🧠 Jeu de Memory
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)]()
+Un jeu de Memory classique développé dans le cadre de ma formation en BUT Informatique. Le but est simple : retrouver toutes les paires de cartes identiques en un minimum de coups!
 
-> Une phrase d'accroche courte et claire expliquant la valeur principale ou le but de votre projet.
+## Fonctionnalités
 
-Ce paragraphe doit expliquer plus en détail le problème que votre projet résout, à qui il s'adresse, et pourquoi il a été créé. Gardez-le concis mais informatif.
+* **Génération aléatoire :** Les cartes sont mélangées à chaque nouvelle partie pour une rejouabilité infinie.
+* **Système de jeu :** Retournement des cartes et validation automatique des paires.
+* **Suivi de la partie :** Affichage en direct du temps.
+* **Fin de jeu :** Détection automatique de la victoire, affichage du nombre de coup joués et de la durée de la partie.
+* **Rejouer :**Bouton permettant de relancer une partie.
 
-## 📋 Table des matières
+## Comment lancer le projet
 
-- [Fonctionnalités](#-fonctionnalités)
-- [Prérequis](#-prérequis)
-- [Installation](#-installation)
-- [Utilisation](#-utilisation)
-- [Contribution](#-contribution)
-- [Auteurs](#-auteurs)
-- [Licence](#-licence)
+1. Téléchargez ou clonez ce dépôt sur votre ordinateur.
+2. Ouvrez le dossier du projet.
+3. Lancez le fichier principal du jeu (ouvrez le fichier `index.html` dans un navigateur).
 
-## ✨ Fonctionnalités
+## 🎲 Comment jouer
 
-* 🚀 **Rapide** : Conçu pour des performances optimales.
-* 🛠️ **Personnalisable** : Facile à adapter à vos besoins.
-* 📦 **Léger** : Zéro dépendance externe.
-* 🔒 **Sécurisé** : Construit avec les meilleures pratiques de sécurité.
+1. Cliquez sur une première carte pour la révéler.
+2. Cliquez sur une seconde carte de votre choix.
+3. **Si les cartes sont identiques :** la paire reste face visible.
+4. **Si les cartes sont différentes :** elles se retournent face cachée après un court instant. 
+5. La partie est gagnée quand toutes les paires ont été trouvées. 
 
-## ⚙️ Prérequis
+## 👤 Auteur
 
-Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
-* [Node.js](https://nodejs.org/) (version 14.0 ou supérieure)
-* [npm](https://www.npmjs.com/) ou [Yarn](https://yarnpkg.com/)
-
-## 🛠️ Installation
-
-1. Clonez le dépôt sur votre machine locale :
-   ```bash
-   git clone [https://github.com/votre-nom-utilisateur/nom-du-projet.git](https://github.com/votre-nom-utilisateur/nom-du-projet.git)
+**Etienne Cologon** 
+*Étudiant en BUT Informatique - Université de Caen (IUT Grand Ouest Normandie)*
