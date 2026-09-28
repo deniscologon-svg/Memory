@@ -8,7 +8,7 @@ Un jeu de Memory classique développé dans le cadre de ma formation en BUT Info
 * **Système de jeu :** Retournement des cartes et validation automatique des paires.
 * **Suivi de la partie :** Affichage en direct du temps.
 * **Fin de jeu :** Détection automatique de la victoire, affichage du nombre de coup joués et de la durée de la partie.
-* **Rejouer :**Bouton permettant de relancer une partie.
+* **'Rejouer :'**Bouton permettant de relancer une partie.
 
 ## Comment lancer le projet
 
